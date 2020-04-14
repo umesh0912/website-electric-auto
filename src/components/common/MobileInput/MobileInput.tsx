@@ -50,7 +50,7 @@ class MobileInput extends React.Component<IProps, IState> {
       isValid: true,
       validationMsg: '',
       isShowErrors: false,
-      isFocused: false
+      isFocused: false,
     };
     this.modal = React.createRef<HTMLDivElement>();
   }
@@ -65,7 +65,7 @@ class MobileInput extends React.Component<IProps, IState> {
     isValidateOnBlur: true,
     validations: ['mobile'],
     errorClass: '',
-    disabled: false
+    disabled: false,
   };
   private modal: React.RefObject<HTMLDivElement>;
   refs: any;
@@ -76,7 +76,7 @@ class MobileInput extends React.Component<IProps, IState> {
       value = nextProps.value;
     }
     this.setState({
-      value
+      value,
     });
   }
 
@@ -104,9 +104,9 @@ class MobileInput extends React.Component<IProps, IState> {
         value,
         isValid: validationObj['isValid'],
         validationMsg: validationObj['message'],
-        isShowErrors: false
+        isShowErrors: false,
       },
-      function() {
+      function () {
         if (this.props.onChange) {
           this.props.onChange(value, validationObj);
         }
@@ -116,7 +116,7 @@ class MobileInput extends React.Component<IProps, IState> {
 
   handleFocus = () => {
     this.setState({
-      isFocused: true
+      isFocused: true,
     });
     this.props.onFocus && this.props.onFocus();
   };
@@ -134,9 +134,9 @@ class MobileInput extends React.Component<IProps, IState> {
         isValid: validationObj['isValid'],
         validationMsg: validationObj['message'],
         isShowErrors,
-        isFocused: false
+        isFocused: false,
       },
-      function() {
+      function () {
         if (this.props.onBlur) {
           this.props.onBlur(this.state.value);
         }
@@ -169,7 +169,7 @@ class MobileInput extends React.Component<IProps, IState> {
 
   public showValidations(isShowErrors: boolean = true) {
     this.setState({
-      isShowErrors
+      isShowErrors,
     });
   }
 
@@ -180,7 +180,7 @@ class MobileInput extends React.Component<IProps, IState> {
       this.setState({
         isShowErrors: true,
         isValid: validationObj['isValid'],
-        validationMsg: validationObj['message']
+        validationMsg: validationObj['message'],
       });
     }
     return validationObj.isValid;
@@ -201,14 +201,14 @@ class MobileInput extends React.Component<IProps, IState> {
       this.state.isValid === false && this.state.isShowErrors === true;
     const handlers = this.props.disabled
       ? {
-          disabled: true
+          disabled: true,
         }
       : {
           onChange: this.handleChange,
           onBlur: this.handleBlur,
           onFocus: this.handleFocus,
           onKeyDown: this.onKeyDown,
-          maxLength: this.props.maxlength
+          maxLength: this.props.maxlength,
         };
     return (
       <div

@@ -14,8 +14,8 @@ const EMAIL_VALIDATIONS = [
   { name: 'required', message: 'Please enter your email.' },
   {
     name: 'email',
-    message: 'Oh. Looks like that email is not valid. Check again?'
-  }
+    message: 'Oh. Looks like that email is not valid. Check again?',
+  },
 ];
 
 class Subscribe extends React.Component<any, IState> {
@@ -24,7 +24,7 @@ class Subscribe extends React.Component<any, IState> {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
     };
     this.textInput = React.createRef<TextInput>();
   }
@@ -34,7 +34,7 @@ class Subscribe extends React.Component<any, IState> {
     if (isValid) {
       const email = this.textInput.current && this.textInput.current.getValue();
       this.props.subscribeUser({
-        subscriber: { email }
+        subscriber: { email },
       });
     }
   };

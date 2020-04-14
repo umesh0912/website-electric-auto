@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function(getComponent: any) {
+export default function (getComponent: any) {
   class AsyncComponent extends React.Component<any, any> {
     static Component = null;
 

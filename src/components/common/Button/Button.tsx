@@ -33,7 +33,7 @@ class Button extends React.Component<IProps, any> {
   }
   static defaultProps = {
     title: 'Submit',
-    disableOnLoading: false
+    disableOnLoading: false,
   };
   btnRef = React.createRef<HTMLButtonElement>();
 
@@ -49,7 +49,7 @@ class Button extends React.Component<IProps, any> {
       customClass = '',
       disabled = false,
       disableOnLoading,
-      theme
+      theme,
     } = this.props;
 
     const themeClassName = theme ? `${prefixClassName}--${theme}` : '';
@@ -63,7 +63,7 @@ class Button extends React.Component<IProps, any> {
         ref={this.btnRef}
         disabled={isDisabled}
         title={tooltip}
-        onClick={evt =>
+        onClick={(evt) =>
           this.props.onClick &&
           this.props.onClick(evt, this.props.customValueAttr)
         }

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from './../history';
 
-export default function(ComposedComponent) {
-  class Authentication extends Component<any,any> {
-
+export default function (ComposedComponent) {
+  class Authentication extends Component<any, any> {
     componentWillMount() {
       if (!this.props.authenticated) {
         browserHistory.push('/signin');
@@ -18,7 +17,7 @@ export default function(ComposedComponent) {
     }
 
     render() {
-      return <ComposedComponent {...this.props} />
+      return <ComposedComponent {...this.props} />;
     }
   }
 

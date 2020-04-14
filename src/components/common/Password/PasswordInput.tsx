@@ -50,7 +50,7 @@ class Password extends React.Component<IProps, IState> {
       value: props.value,
       isValid: true,
       validationMsg: '',
-      isShowErrors: false
+      isShowErrors: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
@@ -68,14 +68,14 @@ class Password extends React.Component<IProps, IState> {
     ellipsisOnOverflow: false,
     capitalize: false,
     focusOnMount: false,
-    readOnly: false
+    readOnly: false,
   };
   inputRef = React.createRef<HTMLInputElement>();
   refs: any;
 
   componentWillReceiveProps(nextProps: IProps) {
     this.setState({
-      value: nextProps.value
+      value: nextProps.value,
     });
   }
 
@@ -99,9 +99,9 @@ class Password extends React.Component<IProps, IState> {
         value,
         isValid: validationObj['isValid'],
         validationMsg: validationObj['message'],
-        isShowErrors: false
+        isShowErrors: false,
       },
-      function() {
+      function () {
         if (this.props.onChange) {
           this.props.onChange(value, validationObj);
         }
@@ -111,7 +111,7 @@ class Password extends React.Component<IProps, IState> {
 
   handleFocus(event?: any) {
     this.setState({
-      isFocused: true
+      isFocused: true,
     });
     this.props.onFocus && this.props.onFocus();
   }
@@ -129,9 +129,9 @@ class Password extends React.Component<IProps, IState> {
         isValid: validationObj['isValid'],
         validationMsg: validationObj['message'],
         isShowErrors,
-        isFocused: false
+        isFocused: false,
       },
-      function() {
+      function () {
         if (this.props.onBlur) {
           this.props.onBlur(this.state.value);
         }
@@ -159,7 +159,7 @@ class Password extends React.Component<IProps, IState> {
 
   public showValidations() {
     this.setState({
-      isShowErrors: true
+      isShowErrors: true,
     });
   }
 
@@ -182,7 +182,7 @@ class Password extends React.Component<IProps, IState> {
           ', only ' +
           this.props.maxLength +
           ' characters allowed.',
-        maxLength: this.props.maxLength
+        maxLength: this.props.maxLength,
       });
     }
 
@@ -191,7 +191,7 @@ class Password extends React.Component<IProps, IState> {
       this.setState({
         isShowErrors: true,
         isValid: validationObj['isValid'],
-        validationMsg: validationObj['message']
+        validationMsg: validationObj['message'],
       });
     }
     return validationObj.isValid;
@@ -219,7 +219,7 @@ class Password extends React.Component<IProps, IState> {
       prefixText,
       customClass,
       ellipsisOnOverflow,
-      prefixParentClass
+      prefixParentClass,
     } = this.props;
 
     const uniqueKey = new Date().getTime().toString();
@@ -233,8 +233,9 @@ class Password extends React.Component<IProps, IState> {
     const parentClass = isFocused ? 'is_focused' : '';
     const hasError = isValid === false && isShowErrors === true;
 
-    const className = `w--password_input ${parentClass || ''} ${customClass ||
-      ''}
+    const className = `w--password_input ${parentClass || ''} ${
+      customClass || ''
+    }
 			${hasError ? 'has-error' : ''}
 			${ellipsisOnOverflow ? 'text_ellipsis' : ''}
 			${prefixParentClass}`;
