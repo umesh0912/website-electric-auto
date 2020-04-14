@@ -1,0 +1,109 @@
+
+@import './../../../scss/variables';
+
+.w--button {
+	font-size: 14px;
+	padding: 10px 15px;
+	border-radius: 4px;
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	display: inline-block;
+	cursor: pointer;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	line-height: 1.42;
+	letter-spacing: 1px;
+	&:empty {
+		background-color: transparent;
+		border: 1px solid;
+		box-shadow: none;
+	}
+	&--block {
+		display: block;
+		width: 100%;
+	}
+	&--black {
+		background-color: $baseDark;
+		color: #fff;
+	}
+	&--bordered {
+		border: 1px solid $baseDark;
+		color: $baseDark;
+		border-radius: 4px;
+		background-color: #fff;
+		&:hover {
+			box-shadow: 0 1px 16px 0 rgba(107, 122, 254, 0.3);
+		}
+	}
+	&--medium {
+		height: 37px;
+		font-size: 16px;
+	}
+	&--large {
+		height: 60px;
+		font-size: 20px;
+		font-weight: bold;
+		font-size: 18px;
+		padding-left: 20px;
+	}
+	&--block {
+		width: 100%;
+	}
+	&--orange {
+		background: #fc5846;
+		background-image: linear-gradient(357.04deg, #ec5f67 0%, #ff704c 100%);
+		color: #fff;
+		padding: 12px 24px;
+		border: 0;
+		text-decoration: none;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	}
+	&:hover {
+		.right-arrow {
+			right: 20px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 46px;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+		text-transform: uppercase;
+		font-size: 14px;
+		&--empty {
+			background-color: transparent;
+			border: 1px solid;
+			box-shadow: none;
+		}
+		&--medium {
+			height: auto;
+			font-size: 16px;
+		}
+	}
+}
+// .right-arrow {
+// 	position: absolute;
+// 	right: 30px;
+// 	display: block;
+// 	top: 28px;
+// 	width: 20px;
+// 	background-color: #fff;
+// 	height: 2px;
+// 	transition: 0.2s;
+// 	&:before {
+// 		@mixin pseudoicon 12px, 12px, #fff, transparent, auto, 0px, -5px, auto;
+// 		transform: rotate(45deg);
+// 		border: 5px solid;
+// 		border-color: #fff #fff transparent transparent;
+// 	}
+// }
+/* <style lang="postcss">
+@import '@css/_settings.css';
+.cf-button {
+	.btn-spinner.w--spinner {
+		& > div {
+			background-color: $baseDark;
+		}
+	}
+}
+</style>
+*/

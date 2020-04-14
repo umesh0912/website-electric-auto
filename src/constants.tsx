@@ -103,3 +103,18 @@ _utf8_decode(e) {
   return t;
 }
 };
+
+
+export const EMAIL_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your email.' },
+  {
+    name: 'email',
+    message: 'Oh. Looks like that email is not valid. Check again?'
+  }
+];
+
+
+
+export const PASSWORD_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your Password.' }
+];
