@@ -1,0 +1,31 @@
+/* Colors */
+$purple: #6b7afe;
+$purple-10: color($purple a(10%));
+$bg-black: #404657;
+$black: #030303;
+$black-90: color($black a(90%));
+$baseDark: #030303;
+$link-color: #4a90e2;
+$white: #fff;
+$red: #e00000;
+/*Font-weight variables*/
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+/*Font-weight variables*/
+
+/*Breakpoints variables (media queries)*/
+$screen-width-md: 1199px;
+$screen-width-smx: 1024px;
+$screen-width-sm: 991px;
+$screen-width-xs: 767px;
+$screen-width-xxs: 499px;
+
+/*Font-family variables*/
+$font-montserrat: montserrat, sans-serif;
+$font-montserrat-thin: montserrat-thin, sans-serif;
+$font-montserrat-light: montserrat-light, sans-serif;
+$font-montserrat-bold: montserrat-bold, sans-serif;
+/*Font-family variables*/
