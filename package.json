@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config='webpack.dev.js'",
+    "prod": "NODE_ENV='production' webpack -p --config='webpack.prod.js'",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
@@ -35,6 +36,8 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.4",
     "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.1.0",
     "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "^4.1.3",
