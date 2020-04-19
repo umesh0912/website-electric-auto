@@ -60,8 +60,8 @@ class Header extends React.Component<any, any> {
             </div>
             <div className="col-sm-4 cta">
               <div className="elem">
-                <div className='login'>
-                  <i className='icon_user'></i>
+                <div className="login">
+                  <i className="icon_user" />
                 </div>
                 <div className="text">Login/Register</div>
               </div>
