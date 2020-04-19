@@ -1,8 +1,77 @@
-#navbarNav{
-    justify-content: flex-end;
-    margin-right: 40%;
+@import './../../scss/variables';
+@media (min-width: 1200px){
+    .header-wrapper{
+        max-width: 1280px;
+    }
 }
-.navbar-brand{
-    width: 400px;
-    text-align: center;
+.header-wrapper{
+    .header-container{
+        padding: 10px 0px;
+    }
+    .login{
+        margin-top: 5px;
+    }
+    .list-search{
+        position: absolute;
+        width: 94%;
+        margin: 0;
+        padding: 0;
+        ._item{
+            border: 1px solid;
+            padding: 10px;
+        }
+    }
+    .search{
+        .w--text_input{
+            margin: 0px;
+            input{
+                border-radius: 4px;
+                background: $borderColor;
+                outline: none;
+                height: 48px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                border: 0px;
+                box-shadow: none;
+            }
+            input::placeholder {
+                text-align: left;
+            }
+            .form-label{
+                display: none;
+            }
+        }
+    }
+    .logo{
+        align-self: center;
+    }
+    .logo-link{
+        display: block;
+        width: 174px;
+        img {
+            width: 100% ;
+            margin: 0;
+        }
+    }
+    .cta{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .elem{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            img{
+                height: 20px;
+            }
+            .text{
+                padding: 10px 5px;
+                margin-top: 4px;
+                font-size: 12px;
+                small{
+                    font-size: 9px;
+                }
+            }
+        }
+    }
 }

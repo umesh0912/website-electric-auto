@@ -118,3 +118,8 @@ export const EMAIL_VALIDATIONS = [
 export const PASSWORD_VALIDATIONS = [
   { name: 'required', message: 'Please enter your Password.' }
 ];
+
+
+export const REQUIRED_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your Bike Name.' }
+];

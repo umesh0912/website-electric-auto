@@ -14,7 +14,7 @@ if (token) {
 }
 
 ReactDOM.render(
-  <div>
+  <div className='main'>
     <Provider store={store}>
       <Router />
     </Provider>

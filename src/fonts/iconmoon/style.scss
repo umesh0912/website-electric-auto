@@ -135,14 +135,15 @@
     content: $icon_ship;
   }
 }
-.icon_gift {
-  &:before {
-    content: $icon_gift;
-  }
-}
 .icon_whatsapp {
   &:before {
     content: $icon_whatsapp;
+  }
+}
+
+.icon_location {
+  &:before {
+    content: $icon_location;
   }
 }
 

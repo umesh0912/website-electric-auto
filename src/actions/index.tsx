@@ -26,7 +26,7 @@ axios.interceptors.response.use(
       error.response.status === 401 &&
       error.response.data.error.code === 10
     ) {
-      signoutUser();
+      // signoutUser();
       console.log('testtst');
     }
     return Promise.reject(error);

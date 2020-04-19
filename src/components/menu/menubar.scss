@@ -1,0 +1,27 @@
+@import './../../scss/variables';
+
+.menu-container{
+    display: inline-flex;
+    justify-content: space-between;
+    .menu-item{
+        padding: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: $semibold;
+        font-size: 14px;
+        cursor: pointer;
+        border-top: 3px solid transparent;
+        &::after{
+            content: '';
+            border-top: 4px solid $black;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            display: inline-block;
+            vertical-align: 3px;
+            margin: 0 5px 0 3px;
+        }
+    }
+    :hover{
+        border-top: 3px solid $red;
+    }
+}

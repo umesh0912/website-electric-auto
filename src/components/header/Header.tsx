@@ -1,76 +1,84 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './header.scss';
+import TextInput from '../common/TextInput/TextInput';
 
 class Header extends React.Component<any, any> {
-  renderLinks() {
-    if (this.props.authenticated) {
-      return [
-        <li className="nav-item right" key={'signout'}>
-          <Link className="nav-link" to={'signout'}>
-            Sign Out
-          </Link>
-        </li>,
-        <li key={'about'}>
-          <Link className="nav-link" to={'about'}>
-            About
-          </Link>
-        </li>,
-        <li key={'service'}>
-          <Link className="nav-link" to={'service'}>
-            Service
-          </Link>
-        </li>,
-        <li key={'feature'}>
-          <Link className="nav-link" to={'feature'}>
-            Feature
-          </Link>
-        </li>,
-        <li key={'foo'}>
-          <Link className="nav-link" to={'Foo'}>
-            Foo
-          </Link>
-        </li>,
-      ];
-    } else {
-      return [
-        <li className="nav-item" key={'signin'}>
-          <Link className="nav-link" to={'/signin'}>
-            Sign In
-          </Link>
-        </li>,
-        <li className="nav-item" key={'signup'}>
-          <Link className="nav-link" to={'/signup'}>
-            Sign Up
-          </Link>
-        </li>,
-      ];
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+    };
   }
+
+  handleSearch = (event) => {
+    this.setState({
+      ...this.state,
+      name: event,
+    });
+  };
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">
-            Admin
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">{this.renderLinks()}</ul>
+      <div style={{ borderBottom: '1px solid #f2f3f3' }}>
+        <div className="header-wrapper container">
+          <div className="header-container row">
+            <div className="col-sm-3 logo">
+              <a
+                href="/"
+                title="ElectricBikes.com - Best Place to buy Electric Bikes in India"
+                className="logo-link"
+              >
+                <img
+                  src="https://bd.gaadicdn.com/pwa/img/bd-logo.svg?v=1.0"
+                  alt="BikeDekho.com - Best place to buy New Bikes in India"
+                />
+              </a>
+            </div>
+            <div className="col-sm-5 search">
+              <TextInput
+                value={this.state.name}
+                onChange={this.handleSearch}
+                customClass=""
+                placeholder={
+                  'Search Bikes or Scooters eg. YZF R15 V3, Activa 6G'
+                }
+              />
+              {this.state.name.length > 2 ? (
+                <div className="list-search col-sm-12">
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                  <div className="_item">asdasdasd</div>
+                </div>
+              ) : null}
+            </div>
+            <div className="col-sm-4 cta">
+              <div className="elem">
+                <div className='login'>
+                  <i className='icon_user'></i>
+                </div>
+                <div className="text">Login/Register</div>
+              </div>
+              <div className="elem">
+                <div>
+                  <img
+                    src={require('./../../assets/images/location.svg').default}
+                  />
+                </div>
+                <div className="text">
+                  <big> Mumbai </big>
+                  <small> Change City </small>
+                </div>
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }
