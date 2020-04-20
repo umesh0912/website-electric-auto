@@ -9,16 +9,106 @@ class MenuBar extends React.Component<any, any> {
 
   render() {
     return (
-      <div style={{ textAlign: 'center', borderBottom: '1px solid #f2f3f3' }}>
+      <div
+        style={{ textAlign: 'center', borderBottom: '1px solid #f2f3f3' }}
+        className="d-none d-sm-block
+      "
+      >
         <div className="menu-container container">
-          <div className="menu-item">Bikes</div>
-          <div className="menu-item">Scooters</div>
-          <div className="menu-item">Bike Finance</div>
-          <div className="menu-item">Used Bike</div>
-          <div className="menu-item">Sale Bike</div>
-          <div className="menu-item">Offers</div>
-          <div className="menu-item">News & Reviews</div>
-          <div className="menu-item">More</div>
+          <ul className="menu-parent">
+            <li>
+              <a className="menu-item" href="/">
+                <span>Bikes</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>All Bikes</li>
+                  <li>Popular Bikes</li>
+                  <li>Latest Bikes</li>
+                  <li>Upcoming Bikes</li>
+                  <li>Best Bikes</li>
+                  <li>Electric Bikes</li>
+                  <li>BS6 Bikes</li>
+                  <li>Showroom</li>
+                  <li>Service Center</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>Scooters</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>All Bikes</li>
+                  <li>Popular Bikes</li>
+                  <li>Latest Bikes</li>
+                  <li>Upcoming Bikes</li>
+                  <li>Best Bikes</li>
+                  <li>Electric Bikes</li>
+                  <li>BS6 Bikes</li>
+                  <li>Showroom</li>
+                  <li>Service Center</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>Bike Finance</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>Bike Loan</li>
+                  <li>EMI Calculator</li>
+                  <li>Personal Loan</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>Used Bike</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>Bike In Your City</li>
+                  <li>Search Used Bikes</li>
+                  <li>Sell Used Bike</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>Sale Bike</span>
+              </a>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>Offers</span>
+              </a>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>News & Reviews</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>Bike News</li>
+                  <li>User Reviews</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a className="menu-item" href="/">
+                <span>More</span>
+              </a>
+              <div className="sub-menu-1">
+                <ul>
+                  <li>Bike Insurance</li>
+                  <li>Bike Tyres</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     );

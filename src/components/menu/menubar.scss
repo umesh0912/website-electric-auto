@@ -3,25 +3,67 @@
 .menu-container{
     display: inline-flex;
     justify-content: space-between;
-    .menu-item{
-        padding: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: $semibold;
-        font-size: 14px;
-        cursor: pointer;
-        border-top: 3px solid transparent;
-        &::after{
-            content: '';
-            border-top: 4px solid $black;
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            display: inline-block;
-            vertical-align: 3px;
-            margin: 0 5px 0 3px;
+    .menu-parent{
+        display: inline-flex;
+        list-style: none;
+        li{
+            padding: 0 40px 0 0 ;
+            position: relative;
+            .menu-item{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                font-size: 14px;
+                cursor: pointer;
+                border-top: 3px solid transparent;
+                position: relative;
+                display: block;
+                height: 53px;
+                line-height: 50px;
+                text-decoration: none;
+                color: $bg-black;
+                &::after{
+                    content: '';
+                    border-top: 4px solid $black;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    display: inline-block;
+                    vertical-align: 3px;
+                    margin: 0 5px 0 3px;
+                }
+            }
+            .sub-menu-1{
+                position: absolute;
+                display: none;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    li{
+                        border: 1px solid $borderColor;
+                        border-bottom: 0;
+                        padding: 10px 15px;
+                        text-align: left;
+                        min-width: 280px;
+                        cursor: pointer;
+                    }
+                    li:hover {
+                        background-color: $borderColor;
+                    }
+                    li:last-child{
+                        border-bottom: 1px solid $borderColor;
+                    }
+                }
+            }
         }
-    }
-    :hover{
-        border-top: 3px solid $red;
+        li:hover{
+            a{
+                border-top: 3px solid $red;
+            }
+                .sub-menu-1{
+                    display: block;
+                }
+            
+        }
     }
 }
