@@ -8,7 +8,7 @@ class Header extends React.Component<any, any> {
     super(props);
     this.state = {
       name: '',
-      open: false
+      open: false,
     };
   }
 
@@ -21,9 +21,9 @@ class Header extends React.Component<any, any> {
 
   toggleDrawer = () => {
     this.setState({
-      open: !this.state.open
-    })
-  }
+      open: !this.state.open,
+    });
+  };
 
   render() {
     return (
@@ -89,9 +89,7 @@ class Header extends React.Component<any, any> {
             </div>
           </div>
         </div>
-        {this.state.open ? <SideBar 
-          onClose={this.toggleDrawer}
-        /> : null }
+        {this.state.open ? <SideBar onClose={this.toggleDrawer} /> : null}
       </div>
     );
   }
