@@ -1,0 +1,54 @@
+@import './../../scss/variables';
+.sidebar-container{
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    z-index: 100;
+    padding: 20px 0px;
+    border: 1px solid $borderColor;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    .main-menu{
+        border-top: 1px solid $borderColor;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                padding: 15px 20px;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    border: 1px solid;
+                    right: 30px;
+                    transform: rotate(-45deg);
+                    border-right: 0px;
+                    border-top: 0px;
+                    height: 8px;
+                    width: 8px;
+                    top: 22px;
+                }
+            }
+            li:nth-last-child(2) {
+                &::before{
+                    content: none;
+                }
+            }
+        }
+    }
+    .icon_close{
+        z-index: 6;
+        position: absolute;
+        right: 30px;
+    }
+    .top-section{
+        display: flex;
+        padding: 0px 20px 10px;
+        .home--side-title{
+            margin: auto 0;
+            margin-left: 10px;
+        }
+    }
+}

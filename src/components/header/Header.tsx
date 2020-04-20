@@ -2,12 +2,13 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import './header.scss';
 import TextInput from '../common/TextInput/TextInput';
-
+import SideBar from './../sideBar/SideBar';
 class Header extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
+      open: false
     };
   }
 
@@ -18,12 +19,21 @@ class Header extends React.Component<any, any> {
     });
   };
 
+  toggleDrawer = () => {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+
   render() {
     return (
       <div style={{ borderBottom: '1px solid #f2f3f3' }}>
         <div className="header-wrapper container">
           <div className="header-container row">
             <div className="col-sm-3 logo">
+              <div className="mobile-ham d-block" onClick={this.toggleDrawer}>
+                <span className="icon" />
+              </div>
               <a
                 href="/"
                 title="ElectricBikes.com - Best Place to buy Electric Bikes in India"
@@ -79,6 +89,9 @@ class Header extends React.Component<any, any> {
             </div>
           </div>
         </div>
+        {this.state.open ? <SideBar 
+          onClose={this.toggleDrawer}
+        /> : null }
       </div>
     );
   }

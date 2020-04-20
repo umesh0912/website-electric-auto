@@ -18,10 +18,11 @@
                 border-top: 3px solid transparent;
                 position: relative;
                 display: block;
-                height: 53px;
-                line-height: 50px;
+                // height: 53px;
+                // line-height: 50px;
                 text-decoration: none;
                 color: $bg-black;
+                padding: 15px 0px;
                 &::after{
                     content: '';
                     border-top: 4px solid $black;
