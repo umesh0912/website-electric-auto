@@ -8,7 +8,7 @@ class SideBar extends React.Component<Iprops, any> {
   constructor(props) {
     super(props);
     this.state = {
-      dropdownType: null;
+      dropdownType: null
     }
   }
 
