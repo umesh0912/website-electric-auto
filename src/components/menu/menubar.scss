@@ -18,8 +18,6 @@
                 border-top: 3px solid transparent;
                 position: relative;
                 display: block;
-                // height: 53px;
-                // line-height: 50px;
                 text-decoration: none;
                 color: $bg-black;
                 padding: 15px 0px;
@@ -31,6 +29,11 @@
                     display: inline-block;
                     vertical-align: 3px;
                     margin: 0 5px 0 3px;
+                }
+            }
+            .menu-item:nth-last-child(1) {
+                &::after{
+                    content: none;
                 }
             }
             .sub-menu-1{

@@ -40,13 +40,10 @@ class MenuBar extends React.Component<any, any> {
               </a>
               <div className="sub-menu-1">
                 <ul>
-                  <li>All Bikes</li>
-                  <li>Popular Bikes</li>
-                  <li>Latest Bikes</li>
-                  <li>Upcoming Bikes</li>
-                  <li>Best Bikes</li>
-                  <li>Electric Bikes</li>
-                  <li>BS6 Bikes</li>
+                  <li>All Scooters</li>
+                  <li>Latest Scooters</li>
+                  <li>Upcoming Scooters</li>
+                  <li>Best Scooters</li>
                   <li>Showroom</li>
                   <li>Service Center</li>
                 </ul>
