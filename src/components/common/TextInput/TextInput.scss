@@ -1,7 +1,7 @@
 @import './../../../scss/variables';
 .w--text_input {
     position: relative;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
     border: 0px;
     
     &:before {
@@ -9,6 +9,9 @@
         left: 19px;
         top: 12px;
         font-size: 18px;
+    }
+    .form-control{
+        box-shadow: none;
     }
     hr {
         display: none;
@@ -32,8 +35,8 @@
     }
     .error-label,
     .text-description {
-        font-size: 14px;
-        margin-top: 5px;
+        font-size: 12px;
+        margin-top: 1px;
         display: block;
     }
     &.has-error {

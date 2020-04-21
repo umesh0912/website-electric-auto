@@ -1,0 +1,98 @@
+@import './../../scss/variables';
+    .login-wrapper, .signup-wrapper, .forgot-password{
+        width: 100%;
+        .link-wrapper{
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 5px 5px 0px 5px;
+            p{
+                text-decoration: underline;
+            }
+        }
+        .forgot-password-link{
+            text-align: right;
+            margin: 0px;
+            text-decoration: underline;
+        }
+        .icon_close{
+            padding: 5px;
+        }
+        .error-label {
+            margin-top: 0px;
+        }
+        .w--password_input{
+            margin-bottom: 8px;
+        }
+        .email-input, .password-input, .name-input, .mobile-input{
+            text-align: left;
+            input{
+                border: 0px;
+                border-radius: 0px;
+                border-bottom: 1px solid #000;
+                padding-left: 0px;
+                width: 100%;
+                &:focus::placeholder {
+                    color: transparent;
+                }
+            }
+            input:not([value=""]){
+                margin-top: 10px;
+            }
+            input::placeholder {
+                text-align: left;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+        .header-login-wrapper, .header-forgot-password,.header-signup-wrapper{
+            text-align: left;
+            font-size: 20px;
+            font-weight: normal;
+            padding: 10px 10px;
+            margin-top: 10px;
+        }
+        .error-label{
+            text-align: left;
+            margin-left: 0px;
+            margin-top: 2px;
+            font-size: 12px;
+        }
+        .social-wrapper{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0px;
+            img{
+                height: 20px;
+                width: 20px;
+            }
+            .fb, .gplus{
+                padding: 10px;
+                border: 1px solid lighten($bg-black, 60%);
+                border-radius: 8px;
+                min-width: 150px;
+                .title{
+                    margin-left: 20px;
+                    font-weight: $medium;
+                    letter-spacing: 1px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .auth-submit{
+        width: 100%;
+        border-radius: 0px;
+        color: $white;
+        background-color:$red ;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+@media only screen and (min-width: $screen-width-xs + 1){
+    .login-wrapper, .signup-wrapper, .forgot-password{
+        &.cf-modal__content{
+            width: 400px;
+        }
+    }
+}
+

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import './header.scss';
 import TextInput from '../common/TextInput/TextInput';
+import Auth from '../auth/Auth';
 import SideBar from './../sideBar/SideBar';
 class Header extends React.Component<any, any> {
   constructor(props) {
@@ -10,6 +11,7 @@ class Header extends React.Component<any, any> {
       name: '',
       open: false,
       showSearch: false,
+      showAuth: false,
     };
   }
 
@@ -42,6 +44,20 @@ class Header extends React.Component<any, any> {
       showSearch: true,
     });
   };
+
+  toggleAuth = () => {
+    this.setState({
+      ...this.state,
+      showAuth: !this.state.showSearch,
+    });
+  };
+
+  closeAuthComponent = () => {
+    this.setState({
+      showAuth: false,
+    });
+  };
+
   render() {
     return (
       <div style={{ borderBottom: '1px solid #f2f3f3' }}>
@@ -88,11 +104,13 @@ class Header extends React.Component<any, any> {
               ) : null}
             </div>
             <div className="col-sm-4 cta">
-              <div className="elem">
+              <div className="elem" onClick={this.toggleAuth}>
                 <div className="login">
                   <i className="icon_user" />
                 </div>
-                <div className="text">Login/Register</div>
+                <div className="text">
+                  <span>Login/Register</span>
+                </div>
               </div>
               <div className="elem">
                 <div>
@@ -109,6 +127,9 @@ class Header extends React.Component<any, any> {
           </div>
         </div>
         {this.state.open ? <SideBar onClose={this.toggleDrawer} /> : null}
+        {this.state.showAuth ? (
+          <Auth onClose={this.closeAuthComponent} />
+        ) : null}
       </div>
     );
   }

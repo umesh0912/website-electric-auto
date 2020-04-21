@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import MenuBar from './components/menu/MenuBar';
 import Make from './components/make/Make';
 import Variant from './components/variant/Variant';
+
 const history = browserHistory;
 
 const Routes = () => {
