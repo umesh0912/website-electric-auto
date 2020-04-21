@@ -1,9 +1,5 @@
 const feedback = () => {
-    return (
-        <div>
-            I am Feedback Component
-        </div>
-    )
-}
+  return <div>I am Feedback Component</div>;
+};
 
 export default feedback;

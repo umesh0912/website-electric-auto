@@ -13,7 +13,7 @@ class HomeBanner extends React.Component<any, any> {
       centeredSlides: true,
       autoplay: {
         delay: 1000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       pagination: {
         el: '.swiper-pagination',
