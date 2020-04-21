@@ -9,13 +9,17 @@ class Header extends React.Component<any, any> {
     this.state = {
       name: '',
       open: false,
+      showSearch: false,
     };
   }
 
   handleSearch = (event) => {
+    const showSearch = event.length > 2;
+
     this.setState({
       ...this.state,
       name: event,
+      showSearch,
     });
   };
 
@@ -25,6 +29,19 @@ class Header extends React.Component<any, any> {
     });
   };
 
+  blur = () => {
+    this.setState({
+      ...this.state,
+      showSearch: false,
+    });
+  };
+
+  focus = () => {
+    this.setState({
+      ...this.state,
+      showSearch: true,
+    });
+  };
   render() {
     return (
       <div style={{ borderBottom: '1px solid #f2f3f3' }}>
@@ -50,11 +67,13 @@ class Header extends React.Component<any, any> {
                 value={this.state.name}
                 onChange={this.handleSearch}
                 customClass=""
+                onBlur={this.blur}
+                onFocus={this.focus}
                 placeholder={
                   'Search Bikes or Scooters eg. YZF R15 V3, Activa 6G'
                 }
               />
-              {this.state.name.length > 2 ? (
+              {this.state.showSearch && this.state.name.length > 2 ? (
                 <div className="list-search col-sm-12">
                   <div className="_item">asdasdasd</div>
                   <div className="_item">asdasdasd</div>
