@@ -9,12 +9,12 @@ class HomeBanner extends React.Component<any, any> {
 
   render() {
     const params = {
-      spaceBetween: 10,
+      spaceBetween: 2,
       centeredSlides: true,
-      // autoplay: {
-      //   delay: 1000,
-      //   disableOnInteraction: false
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

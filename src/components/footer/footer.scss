@@ -1,0 +1,65 @@
+@import './../../scss/variables';
+
+.footer-container{
+    margin-top: 30px;
+    .section-title{
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+        padding: 7px 0 9px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    ul{
+        padding: 0;
+        a {
+            text-decoration: none;
+            color: lighten($color: $bg-black, $amount: 10)
+        }
+        li{
+            list-style: none;
+            padding: 10px;
+            font-size: 12px;
+        }
+    }
+    .social-wrapper{
+        margin-top: 10px;
+        p{
+            margin-bottom: 5px;
+        }
+        .social-icons{
+            display: inline-flex;
+            li{
+                list-style: none;
+                padding: 10px 10px 10px 10px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            li:first-child{
+                padding-left: 0px;
+            }
+            i {
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: $screen-width-xxs + 1) {
+    .footer-container{
+        .section-title{
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            li{
+                width: auto;
+            }
+        }
+    }
+}

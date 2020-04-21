@@ -4,6 +4,7 @@ import { browserHistory } from './history';
 import App from './components/app/App';
 import NotFound from './components/notFound/NotFound';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import MenuBar from './components/menu/MenuBar';
 
 const history = browserHistory;
@@ -18,6 +19,7 @@ const Routes = () => {
           <Route exact={true} path="/" component={App} />
           <Route path="*" component={NotFound} />
         </Switch>
+        <Footer />
       </>
     </Router>
   );
