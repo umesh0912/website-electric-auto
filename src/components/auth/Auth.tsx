@@ -31,39 +31,39 @@ interface IState {
 const modalHeaders = {
   'forgot-password': 'Forgot Password',
   'login-wrapper': 'Login',
-  'signup-wrapper': 'SignUp'
+  'signup-wrapper': 'SignUp',
 };
 
 const EMAIL_VALIDATIONS = [
   { name: 'required', message: 'Please enter your email.' },
   {
     name: 'email',
-    message: 'Oh. Looks like that email is not valid. Check again?'
-  }
+    message: 'Oh. Looks like that email is not valid. Check again?',
+  },
 ];
 
 const MOBILE_VALIDATIONS = [
   { name: 'required', message: 'Please enter a mobile number.' },
   {
     name: 'integer',
-    message: 'Please enter a valid phone number'
+    message: 'Please enter a valid phone number',
   },
   {
     name: 'mobile',
-    message: 'Please enter a valid phone number'
-  }
+    message: 'Please enter a valid phone number',
+  },
 ];
 
 const PASSWORD_VALIDATIONS = [
-  { name: 'required', message: 'Please enter your Password.' }
+  { name: 'required', message: 'Please enter your Password.' },
 ];
 
 const FIRSTNAME_VALIDATIONS = [
-  { name: 'required', message: 'Please enter First Name.' }
+  { name: 'required', message: 'Please enter First Name.' },
 ];
 
 const LASTNAME_VALIDATIONS = [
-  { name: 'required', message: 'Please enter Last Name.' }
+  { name: 'required', message: 'Please enter Last Name.' },
 ];
 
 class Auth extends React.Component<IProps, IState> {
@@ -83,7 +83,7 @@ class Auth extends React.Component<IProps, IState> {
       password: '',
       firstName: '',
       lastName: '',
-      mobile: ''
+      mobile: '',
     };
     this.emailInput = React.createRef<TextInput>();
     this.passwordInput = React.createRef<PasswordInput>();
@@ -104,7 +104,7 @@ class Auth extends React.Component<IProps, IState> {
       ) {
         const email = this.emailInput.current?.getValue();
         const password = this.passwordInput.current?.getValue();
-        this.props.signinUser({ email, password }).then(response => {
+        this.props.signinUser({ email, password }).then((response) => {
           if (response.success) {
             this.toggleAuthModal();
           }
@@ -113,7 +113,7 @@ class Auth extends React.Component<IProps, IState> {
     } else if (this.state.showForgotPassword) {
       if (this.emailInput.current?.isValid()) {
         const data = {
-          email: this.emailInput.current.getValue()
+          email: this.emailInput.current.getValue(),
         };
         console.log(data);
       }
@@ -135,9 +135,9 @@ class Auth extends React.Component<IProps, IState> {
           password: this.passwordInput.current?.getValue(),
           last_name: this.lastnameInput.current?.getValue(),
           first_name: this.firstnameInput.current?.getValue(),
-          mobile: this.mobileInput.current?.getValue()
+          mobile: this.mobileInput.current?.getValue(),
         };
-        this.props.signinUser(data).then(response => {
+        this.props.signinUser(data).then((response) => {
           if (response.success) {
             this.toggleAuthModal();
           }
@@ -150,7 +150,7 @@ class Auth extends React.Component<IProps, IState> {
       ...this.state,
       showForgotPassword: false,
       showLogin: true,
-      showSignUp: false
+      showSignUp: false,
     });
   };
   handleSignUp = () => {
@@ -158,7 +158,7 @@ class Auth extends React.Component<IProps, IState> {
       ...this.state,
       showForgotPassword: false,
       showLogin: false,
-      showSignUp: true
+      showSignUp: true,
     });
   };
   handleForgotPassword = () => {
@@ -166,7 +166,7 @@ class Auth extends React.Component<IProps, IState> {
       ...this.state,
       showForgotPassword: true,
       showLogin: false,
-      showSignUp: false
+      showSignUp: false,
     });
   };
   renderSignUp = () => {
@@ -327,6 +327,6 @@ function mapStateToProps(state: IState) {
 }
 export default hot(module)(
   connect(mapStateToProps, {
-    signinUser
+    signinUser,
   })(Auth)
 );
