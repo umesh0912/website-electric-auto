@@ -6,9 +6,11 @@
     .menu-parent{
         display: inline-flex;
         list-style: none;
+        z-index: 10;
         li{
             padding: 0 40px 0 0 ;
             position: relative;
+            background-color: $white;
             .menu-item{
                 text-transform: uppercase;
                 letter-spacing: 1px;

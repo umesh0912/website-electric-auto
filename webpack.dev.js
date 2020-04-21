@@ -4,6 +4,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 var HappyPack = require('happypack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
   mode: 'development',
@@ -104,6 +106,7 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
     new webpack.HotModuleReplacementPlugin(),
+    // new BundleAnalyzerPlugin()
   ],
   optimization:{
     splitChunks: {

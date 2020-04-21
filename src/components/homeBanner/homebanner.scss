@@ -1,0 +1,60 @@
+@import './../../scss/variables';
+.swiper-container{
+    width: 100%;
+    .swiper-wrapper{
+        height: 400px;
+    }
+    .swiper-slide{
+        background-color: $purple;
+        width: 100%;
+    }
+    .swiper-pagination{
+        position: absolute;
+        bottom: 0;
+        z-index: 6;
+        left: 45%;
+
+        .swiper-pagination-bullet{
+            background-color: $bg-black;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: $white;
+        }
+    }
+
+    .swiper-button {
+        width: 23px;
+        height: 23px;
+        border: 2px solid;
+        border-top: 0;
+        border-left: 0;
+        position: absolute;
+        top: 50%;
+        z-index: 7;
+        cursor: pointer;
+        outline: none;
+        &-prev{
+            @extend .swiper-button;
+            transform: rotate(-225deg);
+            left: 20px;
+        }
+        &-next{
+            @extend .swiper-button;
+            transform: rotate(-45deg);
+            right: 20px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $screen-width-xxs + 1) {
+    .swiper-container .swiper-pagination{
+        transform: translate(-50%, -50%);
+    }
+}
