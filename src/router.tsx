@@ -21,7 +21,7 @@ const Routes = () => {
           <Route exact={true} path="/" component={App} />
           <Route path="/:make/:model" exact={true} component={Variant} />
           <Route path="/:make" exact={true} component={Make} />
-          <Route path="*" component={NotFound} />
+          <Route path="*" exact={false} component={NotFound} />
         </Switch>
         <Footer />
       </>
