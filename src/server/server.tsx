@@ -114,8 +114,7 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
   }
 });
 
-// Loadable.preloadAll().then(() => {
-  app.listen(PORT, () =>
-    console.log(`Frontend service listening on port: ${PORT}`)
-  );
-// });
+app.listen(PORT, () =>
+  console.log(`Frontend service listening on port: ${PORT}`)
+);
+

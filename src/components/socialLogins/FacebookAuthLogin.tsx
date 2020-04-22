@@ -1,7 +1,7 @@
 import * as React from 'react';
 import FacebookLogin from 'react-facebook-login';
 declare let __FB_APP_ID: any;
-import './social.scss'
+import './social.scss';
 interface IProps {
   customClass?: string;
 }

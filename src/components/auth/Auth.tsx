@@ -241,8 +241,11 @@ class Auth extends React.Component<IProps, IState> {
   renderSocialLogins = () => {
     return (
       <div className="social-wrapper">
-        <div style={{position:'relative'}}>
-          <img src={require('./../../assets/img/facebook.svg').default} className='fb-img' />
+        <div style={{ position: 'relative' }}>
+          <img
+            src={require('./../../assets/img/facebook.svg').default}
+            className="fb-img"
+          />
           <FacebookAuthLogin customClass={'fb'} />
         </div>
         <GoogleAuthLogin customClass={'gplus'} />

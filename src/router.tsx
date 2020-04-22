@@ -15,7 +15,7 @@ const Routes = () => {
       <>
         <Header />
         <MenuBar />
-          {renderRoutes(RoutesMap as any)}
+        {renderRoutes(RoutesMap as any)}
         <Footer />
       </>
     </Router>

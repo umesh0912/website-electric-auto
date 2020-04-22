@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GoogleLogin } from 'react-google-login';
-declare let __GOOGLE_APP_ID: any
+declare let __GOOGLE_APP_ID: any;
 
 interface IProps {
   customClass?: string;

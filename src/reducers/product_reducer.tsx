@@ -1,6 +1,6 @@
 import { SAVE_PRODUCT_DETAILS } from '../actions/types';
 
-export default function(
+export default function (
   state = {},
   action: {
     type: string;

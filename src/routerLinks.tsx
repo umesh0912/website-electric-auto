@@ -4,14 +4,13 @@ import NotFound from './components/notFound/NotFound';
 import Make from './components/make/Make';
 import Variant from './components/variant/Variant';
 
-
 export default [
   {
     component: App,
     routeName: 'home',
     path: '/',
     exact: true,
-    loadData: fetchHomeData
+    loadData: fetchHomeData,
   },
   {
     component: Variant,
@@ -28,6 +27,6 @@ export default [
   {
     component: NotFound,
     routeName: 'pagenotfound',
-    path: '*'
-  }
+    path: '*',
+  },
 ];
