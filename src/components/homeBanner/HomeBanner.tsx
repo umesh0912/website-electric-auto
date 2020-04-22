@@ -11,8 +11,11 @@ class HomeBanner extends React.Component<any, any> {
     const params = {
       spaceBetween: 2,
       centeredSlides: true,
+      direction: 'horizontal',
+      slidesPerGroup: 1,
+      slidesPerView: 1,
       autoplay: {
-        delay: 1000,
+        delay: 4000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -23,6 +26,7 @@ class HomeBanner extends React.Component<any, any> {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      loop: false,
     };
 
     return (
