@@ -8,8 +8,8 @@ import TextInput from '../common/TextInput/TextInput';
 import MobileInput from '../common/MobileInput/MobileInput';
 import PasswordInput from '../common/Password/PasswordInput';
 import { signinUser } from './../../actions/index';
-const facebooklogo = require('./../../assets/img/facebook.svg');
-const googlelogo = require('./../../assets/img/gplus.svg');
+import GoogleAuthLogin from '../socialLogins/GoogleAuthLogin';
+import FacebookAuthLogin from '../socialLogins/FacebookAuthLogin';
 
 interface IProps {
   isMobileDevice?: boolean;
@@ -241,18 +241,11 @@ class Auth extends React.Component<IProps, IState> {
   renderSocialLogins = () => {
     return (
       <div className="social-wrapper">
-        <div className="fb">
-          <span>
-            <img src={facebooklogo.default} />
-          </span>
-          <span className="title">Facebook</span>
+        <div style={{position:'relative'}}>
+          <img src={require('./../../assets/img/facebook.svg').default} className='fb-img' />
+          <FacebookAuthLogin customClass={'fb'} />
         </div>
-        <div className="gplus">
-          <span>
-            <img src={googlelogo.default} />
-          </span>
-          <span className="title">Google</span>
-        </div>
+        <GoogleAuthLogin customClass={'gplus'} />
       </div>
     );
   };

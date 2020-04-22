@@ -1,0 +1,15 @@
+@import './../../scss/variables';
+
+.fb-btn{
+    text-decoration: none;
+    text-transform: capitalize;
+    background: white;
+    border: 1px solid transparent;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px, rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+    border-radius: 2px;
+    min-width: 150px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    outline: none;
+}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Swiper from 'react-id-swiper';
-import 'swiper/swiper.scss';
+// import 'swiper/swiper.scss';
 import './homebanner.scss';
 class HomeBanner extends React.Component<any, any> {
   constructor(props) {

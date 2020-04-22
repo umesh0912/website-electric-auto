@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { signinUser } from './auth_actions';
-
+import { fetchHomeData } from './server_actions';
 declare let __isBrowser__: boolean;
 
 let API_TOKEN;
@@ -34,3 +34,4 @@ axios.interceptors.response.use(
 );
 
 export { signinUser };
+export { fetchHomeData };

@@ -6,7 +6,6 @@ var HappyPack = require('happypack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
 module.exports = {
   mode: 'development',
   entry: './src/client.tsx',
@@ -94,6 +93,11 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       __isBrowser__: JSON.stringify(true),
+      __GOOGLE_APP_ID: JSON.stringify(process.env.EVMALL_GOOGLE_CLIENT_ID),
+      __FB_APP_ID: JSON.stringify(process.env.EVMALL_FB_APP_ID),
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production'),
+      },
     }),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
