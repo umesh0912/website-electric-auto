@@ -15,7 +15,6 @@ class FacebookAuthLogin extends React.Component<IProps, any> {
   }
 
   responseFacebook = () => {
-    debugger;
   };
 
   handleClick = () => {

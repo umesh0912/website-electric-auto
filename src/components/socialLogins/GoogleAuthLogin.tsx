@@ -12,11 +12,9 @@ class GoogleAuthLogin extends React.Component<IProps, any> {
   }
 
   responseFailure = () => {
-    debugger;
   };
 
   responseSuccess = () => {
-    debugger;
   };
 
   render() {
