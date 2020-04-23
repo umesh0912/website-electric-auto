@@ -19,10 +19,11 @@ axios.interceptors.response.use(
     return response;
   },
   (error) => {
-    if ([500, 501, 502, 503, 503].indexOf(error.response.status) > -1) {
+    if ([500, 501, 502, 503, 503].indexOf(error.response && error.response.status) > -1) {
       // toastr.warning('Something went wrong try again later ...');
       console.log('servererror');
     } else if (
+      error.response && 
       error.response.status === 401 &&
       error.response.data.error.code === 10
     ) {
