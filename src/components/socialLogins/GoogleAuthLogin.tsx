@@ -11,11 +11,9 @@ class GoogleAuthLogin extends React.Component<IProps, any> {
     super(props);
   }
 
-  responseFailure = () => {
-  };
+  responseFailure = () => {};
 
-  responseSuccess = () => {
-  };
+  responseSuccess = () => {};
 
   render() {
     const { customClass = '' } = this.props;
