@@ -22,4 +22,4 @@ const ErrorReducer = (state = initialState, action) => {
   }
 };
 
-export  default ErrorReducer
+export default ErrorReducer;
